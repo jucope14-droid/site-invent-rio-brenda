@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brenda Arruda | Advocacia &amp; Consultoria Jurídica</title>
+<meta name="description" content="Assessoria jurídica em inventário, partilha de bens e sucessões. Condução completa do processo, com orientação clara em cada etapa.">
+<meta property="og:title" content="Brenda Arruda | Advocacia &amp; Consultoria Jurídica">
+<meta property="og:description" content="Inventário, partilha e sucessões. Orientação jurídica para famílias.">
+<meta property="og:image" content="logo-preta.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="monograma-preto.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#0D0D0D;
+  --ink-2:#171716;
+  --ivory:#F2EDE4;
+  --ivory-2:#E7E0D3;
+  --brass:#A8905F;
+  --brass-soft:#C6B489;
+  --muted:#6E6A62;
+  --muted-dark:#9C968A;
+  --line:#DDD5C6;
+  --line-dark:rgba(242,237,228,.16);
+  --wa:#1F8F5F;
+  --wa-bright:#25D366;
+  --display:"Cormorant Garamond",Garamond,Georgia,serif;
+  --body:"Jost",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--ivory);color:var(--ink);
+  font-family:var(--body);font-size:17px;font-weight:300;
+  line-height:1.72;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1120px;margin:0 auto;padding:0 26px}
+img{max-width:100%;display:block}
+
+/* ——— fio com losango, tirado do divisor da marca ——— */
+.rule{display:flex;align-items:center;gap:13px}
+.rule::before,.rule::after{content:"";flex:1;height:1px;background:var(--brass)}
+.dia{width:6px;height:6px;background:var(--brass);transform:rotate(45deg);flex:none}
+.rule-dark::before,.rule-dark::after{background:var(--brass-soft);opacity:.55}
+.rule-dark .dia{background:var(--brass-soft)}
+
+.eyebrow{
+  font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--brass);font-weight:400;
+}
+
+/* ——— CABEÇALHO ——— */
+header{
+  position:sticky;top:0;z-index:60;
+  background:rgba(242,237,228,.9);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 0}
+.nav-brand{display:flex;align-items:center;gap:13px;text-decoration:none;color:var(--ink)}
+.nav-brand img{width:40px;height:auto;flex:none}
+.nav-brand b{font-family:var(--display);font-weight:600;font-size:19px;letter-spacing:.07em;line-height:1.1;display:block}
+.nav-brand small{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);display:block;margin-top:3px}
+.nav-links{display:flex;gap:30px;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.nav-links a{color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--brass)}
+@media(max-width:900px){.nav-links{display:none}.nav-brand small{display:none}}
+
+/* ——— BOTÕES ——— */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--ink);color:var(--ivory);
+  padding:15px 30px;border:1px solid var(--ink);
+  font-family:var(--body);font-size:12.5px;font-weight:400;
+  letter-spacing:.19em;text-transform:uppercase;text-decoration:none;
+  transition:background .25s,color .25s,border-color .25s;
+}
+.btn:hover{background:transparent;color:var(--ink)}
+.btn svg{width:17px;height:17px;fill:currentColor;flex:none}
+.btn-sm{padding:11px 20px;font-size:11px;letter-spacing:.16em}
+.btn-line{background:transparent;color:var(--ink);border-color:var(--brass)}
+.btn-line:hover{background:var(--brass);color:var(--ivory);border-color:var(--brass)}
+.btn-ivory{background:var(--ivory);color:var(--ink);border-color:var(--ivory)}
+.btn-ivory:hover{background:transparent;color:var(--ivory)}
+
+/* ——— HERO ——— */
+.hero{padding:82px 0 90px;text-align:center}
+.hero-mark{width:150px;height:auto;margin:0 auto 32px}
+.hero h1{
+  font-family:var(--display);font-weight:500;
+  font-size:clamp(46px,7.4vw,86px);line-height:1.1;
+  letter-spacing:-.012em;max-width:16ch;margin:26px auto 0;
+}
+.hero h1 i{font-style:italic;color:var(--brass)}
+.hero .lede{
+  font-size:18px;color:var(--muted);max-width:56ch;
+  margin:30px auto 40px;line-height:1.78;
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.hero-note{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-top:30px}
+.hero .rule{max-width:340px;margin:32px auto 0}
+
+/* ——— SEÇÕES ——— */
+section{padding:88px 0}
+.sec-head{max-width:58ch;margin-bottom:56px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+h2{
+  font-family:var(--display);font-weight:500;
+  font-size:clamp(34px,4.5vw,52px);line-height:1.18;
+  letter-spacing:-.01em;margin-top:16px;
+}
+.sec-head p{color:var(--muted);margin-top:16px;font-size:17px}
+
+/* ——— PERCURSO (elemento assinatura) ——— */
+.percurso{background:var(--ink);color:var(--ivory)}
+.percurso h2{color:var(--ivory)}
+.percurso .sec-head p{color:var(--muted-dark)}
+.steps{border-top:1px solid var(--line-dark)}
+.step{
+  display:grid;grid-template-columns:70px 1.05fr 1fr;gap:30px;
+  padding:32px 0;border-bottom:1px solid var(--line-dark);align-items:start;
+}
+.step-n{font-family:var(--display);font-weight:500;font-size:29px;color:var(--brass);line-height:1;padding-top:4px}
+.step h3{font-family:var(--display);font-weight:500;font-size:28px;line-height:1.24;margin-bottom:8px;color:var(--ivory)}
+.step .who{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--brass-soft);margin-bottom:10px}
+.step p{color:var(--muted-dark);font-size:15.5px;line-height:1.7}
+@media(max-width:780px){
+  .step{grid-template-columns:44px 1fr;gap:18px}
+  .step-detail{grid-column:2}
+  .step-n{font-size:21px}
+}
+
+/* ——— ATUAÇÃO ——— */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.card{background:var(--ivory);padding:38px 32px;transition:background .3s}
+.card:hover{background:var(--ivory-2)}
+.card .dia{margin-bottom:18px}
+.card h3{font-family:var(--display);font-weight:500;font-size:26px;margin-bottom:11px;line-height:1.25}
+.card p{color:var(--muted);font-size:15.5px}
+
+/* ——— DÚVIDAS ——— */
+.duvidas{background:var(--ivory-2)}
+details{border-bottom:1px solid var(--line);padding:22px 0}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{
+  font-family:var(--display);font-weight:500;font-size:24px;line-height:1.32;cursor:pointer;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:24px;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{
+  content:"";flex:none;width:7px;height:7px;
+  background:var(--brass);transform:rotate(45deg);transition:transform .3s;
+}
+details[open] summary::after{transform:rotate(225deg)}
+details p{color:var(--muted);font-size:16px;margin-top:16px;max-width:72ch}
+
+/* ——— SOBRE ——— */
+.about{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start}
+@media(max-width:860px){.about{grid-template-columns:1fr;gap:36px}}
+.portrait{
+  width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 22%;
+  border:1px solid var(--line);background:var(--ivory-2);display:block;
+}
+.about-body .lead{font-family:var(--display);font-weight:500;font-size:28px;line-height:1.45;margin-bottom:22px}
+.about-body p{margin-bottom:18px;color:#4A463F}
+
+/* ——— CHAMADA FINAL ——— */
+.final{background:var(--ink);color:var(--ivory);text-align:center}
+.final img{width:104px;height:auto;margin:0 auto 28px}
+.final h2{color:var(--ivory);max-width:19ch;margin:16px auto 0}
+.final p{color:var(--muted-dark);max-width:50ch;margin:20px auto 36px}
+.final .rule{max-width:300px;margin:0 auto 26px}
+
+/* ——— RODAPÉ ——— */
+footer{background:var(--ink-2);color:var(--muted-dark);padding:52px 0 40px;font-size:13.5px;border-top:1px solid var(--line-dark)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:32px}
+.foot img{width:180px;height:auto;opacity:.92;margin-bottom:14px}
+footer a{color:var(--brass-soft);text-decoration:none}
+footer a:hover{text-decoration:underline}
+.foot-t{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--brass);margin-bottom:9px}
+.disclaimer{max-width:64ch;margin-top:34px;padding-top:22px;border-top:1px solid var(--line-dark);font-size:12px;line-height:1.75;color:#6B665D}
+
+/* ——— BOTÃO FLUTUANTE ——— */
+.wa-float{
+  position:fixed;right:22px;bottom:22px;z-index:100;
+  display:flex;align-items:center;gap:11px;
+  background:var(--wa);color:#fff;
+  padding:15px 22px 15px 18px;border-radius:999px;text-decoration:none;
+  font-size:12px;font-weight:400;letter-spacing:.17em;text-transform:uppercase;
+  box-shadow:0 8px 28px rgba(13,13,13,.26);
+  transition:transform .25s,background .25s;
+}
+.wa-float:hover{background:var(--wa-bright);color:var(--ink);transform:translateY(-2px)}
+.wa-float svg{width:23px;height:23px;fill:currentColor;flex:none}
+@media(max-width:560px){.wa-float span{display:none}.wa-float{padding:17px;border-radius:50%}}
+
+:focus-visible{outline:1px solid var(--brass);outline-offset:4px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<!-- ==========================================================
+     WhatsApp configurado: (21) 97590-3555
+     Link usado no site: https://wa.me/5521975903555
+     Mensagem que abre pronta: "Gostaria de mais informações"
+     ========================================================== -->
+
+<header>
+  <div class="wrap nav">
+    <a class="nav-brand" href="#topo">
+      <img src="monograma-preto.png" alt="">
+      <span>
+        <b>BRENDA ARRUDA</b>
+        <small>Advocacia &amp; Consultoria Jurídica</small>
+      </span>
+    </a>
+    <nav class="nav-links">
+      <a href="#percurso">Percurso</a>
+      <a href="#atuacao">Atuação</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+    <a class="btn btn-line btn-sm" href="https://wa.me/5521975903555?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener">Falar agora</a>
+  </div>
+</header>
+
+<main id="topo">
+
+<!-- ——— HERO ——— -->
+<section class="hero">
+  <div class="wrap">
+    <img class="hero-mark" src="monograma-preto.png" alt="Monograma Brenda Arruda">
+    <p class="eyebrow">Inventário &middot; Partilha &middot; Sucessões</p>
+    <h1>Depois da perda, ainda existe a <i>papelada</i>.</h1>
+    <p class="lede">
+      Inventário é o processo que transfere os bens de quem faleceu para os herdeiros.
+      Sem ele, a família não consegue vender o imóvel, movimentar a conta bancária ou
+      transferir o veículo. Conduzo esse caminho do início ao fim e explico cada etapa
+      em português claro.
+    </p>
+    <div class="hero-actions">
+      <a class="btn" href="https://wa.me/5521975903555?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.2s-.8 1-.9 1.1c-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2m0 18.2c-1.6 0-3.2-.4-4.6-1.3l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2"/></svg>
+        Falar no WhatsApp
+      </a>
+      <a class="btn btn-line" href="#percurso">Ver o percurso</a>
+    </div>
+    <p class="hero-note">Atendimento presencial e on-line</p>
+    <div class="rule"><span class="dia"></span></div>
+  </div>
+</section>
+
+<!-- ——— PERCURSO ——— -->
+<section class="percurso" id="percurso">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">O processo, sem mistério</p>
+      <h2>O percurso do inventário, etapa por etapa</h2>
+      <p>A ordem importa: cada etapa depende da anterior. Abaixo, o que acontece e quem faz o quê.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">I</div>
+        <div>
+          <div class="who">Primeira conversa</div>
+          <h3>Entender a situação da família</h3>
+        </div>
+        <div class="step-detail"><p>Quem faleceu, quem são os herdeiros, se havia testamento e quais bens existem. É nessa conversa que definimos se o caso segue pelo cartório ou pela via judicial.</p></div>
+      </div>
+
+      <div class="step">
+        <div class="step-n">II</div>
+        <div>
+          <div class="who">Você reúne &middot; eu oriento</div>
+          <h3>Reunir os documentos</h3>
+        </div>
+        <div class="step-detail"><p>Certidão de óbito, documentos dos herdeiros, matrícula dos imóveis, extratos, documento do veículo. Envio uma lista feita para o seu caso — não uma lista genérica da internet.</p></div>
+      </div>
+
+      <div class="step">
+        <div class="step-n">III</div>
+        <div>
+          <div class="who">Comigo</div>
+          <h3>Levantamento de bens e dívidas</h3>
+        </div>
+        <div class="step-detail"><p>Busca de bens, certidões e verificação das dívidas deixadas. A herança responde pelas dívidas antes de ser dividida — descobrir isso cedo evita surpresa na partilha.</p></div>
+      </div>
+
+      <div class="step">
+        <div class="step-n">IV</div>
+        <div>
+          <div class="who">Comigo</div>
+          <h3>Cálculo e recolhimento do ITCMD</h3>
+        </div>
+        <div class="step-detail"><p>O imposto estadual sobre herança. Cada estado tem sua alíquota, seu prazo e suas hipóteses de isenção — e o atraso costuma gerar multa. Cuido da apuração e da declaração.</p></div>
+      </div>
+
+      <div class="step">
+        <div class="step-n">V</div>
+        <div>
+          <div class="who">Comigo &middot; você assina</div>
+          <h3>Partilha e escritura</h3>
+        </div>
+        <div class="step-detail"><p>Elaboração do plano de partilha e assinatura em cartório ou homologação pelo juiz, conforme o procedimento cabível.</p></div>
+      </div>
+
+      <div class="step">
+        <div class="step-n">VI</div>
+        <div>
+          <div class="who">Comigo</div>
+          <h3>Transferência definitiva</h3>
+        </div>
+        <div class="step-detail"><p>Registro do imóvel no nome dos herdeiros, transferência do veículo e liberação dos valores em banco. Só aqui o inventário está de fato encerrado.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ——— ATUAÇÃO ——— -->
+<section id="atuacao">
+  <div class="wrap">
+    <div class="sec-head center">
+      <p class="eyebrow">Áreas de atuação</p>
+      <h2>Trabalho concentrado em sucessões</h2>
+      <p>Inventário não é um serviço entre muitos. É o foco do escritório.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><span class="dia"></span><h3>Inventário extrajudicial</h3><p>Feito em cartório, quando os herdeiros estão de acordo e não há testamento nem herdeiro incapaz. É o caminho mais rápido.</p></div>
+      <div class="card"><span class="dia"></span><h3>Inventário judicial</h3><p>Necessário quando há discordância entre herdeiros, testamento ou herdeiro menor de idade. Conduzo o processo do início à partilha.</p></div>
+      <div class="card"><span class="dia"></span><h3>Arrolamento sumário</h3><p>Procedimento simplificado para heranças de menor valor ou com herdeiros maiores e capazes em consenso.</p></div>
+      <div class="card"><span class="dia"></span><h3>Sobrepartilha</h3><p>Para bens que apareceram depois que o inventário já havia sido encerrado — situação mais comum do que parece.</p></div>
+      <div class="card"><span class="dia"></span><h3>Regularização de imóveis</h3><p>Inventários antigos, imóveis ainda no nome de avós ou bisavós, cadeias sucessórias interrompidas há décadas.</p></div>
+      <div class="card"><span class="dia"></span><h3>Planejamento sucessório</h3><p>Testamento, doação em vida e organização patrimonial para reduzir conflito e custo no futuro.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ——— DÚVIDAS ——— -->
+<section class="duvidas" id="duvidas">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Perguntas frequentes</p>
+      <h2>Dúvidas que aparecem sempre</h2>
+      <p>Respostas de ordem geral. Cada família tem uma situação própria — o caso de vocês merece uma conversa específica.</p>
+    </div>
+
+    <details>
+      <summary>Existe prazo para abrir o inventário?</summary>
+      <p>Sim. A legislação prevê prazo contado a partir do falecimento, e os estados costumam aplicar multa sobre o ITCMD quando ele é ultrapassado. O prazo e o valor da multa variam conforme o estado. Mesmo passado o prazo, o inventário continua sendo possível e necessário — quanto antes, menor o custo.</p>
+    </details>
+    <details>
+      <summary>Quanto tempo demora?</summary>
+      <p>O extrajudicial, com documentação completa e herdeiros de acordo, costuma ser resolvido em poucos meses. O judicial depende do andamento do fórum e de eventual disputa entre herdeiros. Na primeira conversa consigo indicar em qual cenário o seu caso se encaixa.</p>
+    </details>
+    <details>
+      <summary>Todos os herdeiros precisam comparecer?</summary>
+      <p>Todos precisam estar representados, mas nem sempre presencialmente. É possível atuar por procuração, o que ajuda quando há herdeiros em outra cidade ou fora do país.</p>
+    </details>
+    <details>
+      <summary>E se um herdeiro não quiser assinar?</summary>
+      <p>A falta de consenso impede o caminho do cartório e leva o caso para a via judicial, onde o juiz decide. Não é o fim do processo — muda apenas o percurso.</p>
+    </details>
+    <details>
+      <summary>A pessoa deixou dívidas. Os herdeiros vão pagar?</summary>
+      <p>As dívidas são pagas com os próprios bens da herança. O herdeiro não responde com seu patrimônio pessoal além do que recebeu. Levantar as dívidas antes da partilha é justamente uma das etapas do trabalho.</p>
+    </details>
+    <details>
+      <summary>Como funciona a contratação e os honorários?</summary>
+      <p>Os honorários são definidos em contrato escrito, apresentado antes do início de qualquer trabalho, considerando a complexidade do caso e o procedimento cabível. Fale comigo pelo WhatsApp e explico as condições.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ——— SOBRE ——— -->
+<section id="sobre">
+  <div class="wrap about">
+    <img class="portrait" src="brenda.jpg" alt="Brenda Arruda, advogada">
+    <div class="about-body">
+      <p class="eyebrow">Sobre</p>
+      <h2 style="margin-bottom:26px">Brenda Arruda</h2>
+      <p class="lead">Escolhi trabalhar com sucessões porque é uma área em que a técnica jurídica precisa vir acompanhada de paciência.</p>
+      <p>
+        <!-- Substitua por formação, pós-graduação, tempo de atuação e cidade -->
+        Advogada inscrita na Ordem dos Advogados do Brasil, atuo na condução de inventários
+        judiciais e extrajudiciais, partilha de bens, regularização de imóveis com cadeia
+        sucessória pendente e planejamento sucessório.
+      </p>
+      <p>
+        Meu compromisso é que a família entenda o que está acontecendo em cada etapa.
+        Documento jurídico é cheio de termo difícil; a explicação não precisa ser.
+      </p>
+      <p style="margin-top:30px">
+        <a class="btn btn-line" href="https://wa.me/5521975903555?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener">Agendar uma conversa</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ——— CHAMADA FINAL ——— -->
+<section class="final">
+  <div class="wrap">
+    <img src="monograma-marfim.png" alt="">
+    <div class="rule rule-dark"><span class="dia"></span></div>
+    <h2>Conte o que aconteceu. Eu indico o caminho.</h2>
+    <p>Uma mensagem já é suficiente para começar. Você não precisa ter os documentos em mãos agora.</p>
+    <a class="btn btn-ivory" href="https://wa.me/5521975903555?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.2s-.8 1-.9 1.1c-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2m0 18.2c-1.6 0-3.2-.4-4.6-1.3l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2"/></svg>
+      Chamar no WhatsApp
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <img src="logo-marfim.png" alt="Brenda Arruda — Advocacia &amp; Consultoria Jurídica">
+      </div>
+      <div>
+        <div class="foot-t">Inscrição</div>
+        <!-- Preencha a seccional e o número reais -->
+        Brenda Arruda<br>
+        Advogada &middot; OAB/RJ nº 244.981
+      </div>
+      <div>
+        <div class="foot-t">Contato</div>
+        <a href="https://wa.me/5521975903555?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener">WhatsApp</a><br>
+        <a href="mailto:contato@brendaarruda.adv.br">contato@brendaarruda.adv.br</a><br>
+        Endereço &middot; Cidade/UF
+      </div>
+    </div>
+    <p class="disclaimer">
+      Este site tem caráter meramente informativo, em conformidade com o Código de Ética e
+      Disciplina da OAB e com as normas de publicidade da advocacia. As informações aqui
+      apresentadas são de ordem geral e não constituem consulta ou orientação jurídica para
+      casos concretos.
+    </p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5521975903555?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener" aria-label="Falar com Brenda Arruda no WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.2s-.8 1-.9 1.1c-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2m0 18.2c-1.6 0-3.2-.4-4.6-1.3l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+</body>
+</html>
